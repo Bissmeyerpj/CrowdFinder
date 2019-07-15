@@ -6,4 +6,17 @@
     <string name="sign_up_button">SIGN UP</string>
     <string name="stay_logged_in">Stay Logged In</string>
     <string name="title_activity_bottom_nav">BottomNavActivity</string>
+    <string name="nickname">Nickname</string>
+    <string name="change">(change)</string>
+    <string name="email">Email</string>
+    <string name="metric">Metric</string>
+    <string name="merica">U.S.</string>
+    <string name="metric_u_s">Metric/U.S.</string>
+    <string name="notify">Notifications</string>
+    <string name="night_mode">Night Mode</string>
+    <string name="location_sharing">Location Sharing</string>
+    <string name="location_info">
+        If disabled, the app will not function properly and your location will not be accessed
+    </string>
+    <string name="logout">LOGOUT</string>
 </resources>

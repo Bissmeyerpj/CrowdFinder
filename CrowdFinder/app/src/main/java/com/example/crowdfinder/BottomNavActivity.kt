@@ -14,7 +14,7 @@ class BottomNavActivity : AppCompatActivity() {
         var switchTo: Fragment? = null
         when (item.itemId) {
             R.id.settings -> {
-//                switchTo = SettingsFragment()
+                switchTo = SettingsFragment()
             }
             R.id.compass -> {
 
@@ -45,6 +45,11 @@ class BottomNavActivity : AppCompatActivity() {
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
+
+        val frag = SettingsFragment()
+        val ft = supportFragmentManager.beginTransaction()
+        ft.replace(R.id.fragment_container, frag, "MY_FRAGMENT")
+        ft.commit()
     }
 
 }
