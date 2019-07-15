@@ -1004,6 +1004,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable ic_group
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_mtrl_chip_checked_black
@@ -1071,6 +1072,7 @@ id chronometer
 id clip_horizontal
 id clip_vertical
 id collapseActionView
+id compass
 id container
 id content
 id contentPanel
@@ -1102,6 +1104,8 @@ id fill_vertical
 id filled
 id fixed
 id forever
+id fragment_container
+id friends
 id ghost_view
 id gone
 id group_divider
@@ -1133,6 +1137,7 @@ id mini
 id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
+id nav_view
 id navigation_header_container
 id never
 id none
@@ -1152,6 +1157,7 @@ id pin
 id progress_circular
 id progress_horizontal
 id radio
+id requests
 id right
 id right_icon
 id right_side
@@ -1176,6 +1182,7 @@ id search_src_text
 id search_voice_btn
 id select_dialog_listview
 id selected
+id settings
 id shortcut
 id showCustom
 id showHome
@@ -1308,6 +1315,7 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+menu bottom_nav_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 string abc_action_bar_home_description

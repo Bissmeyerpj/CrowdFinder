@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/settings"
+            android:icon="@android:drawable/ic_menu_preferences"
+            android:title="Settings"/>
+
+    <item
+            android:id="@+id/compass"
+            android:icon="@android:drawable/ic_menu_compass"
+            android:title="Compass"/>
+
+    <item
+            android:id="@+id/friends"
+            android:icon="@drawable/ic_group"
+            android:title="Friends"/>
+
+    <item
+            android:id="@+id/requests"
+            android:icon="@android:drawable/ic_menu_help"
+            android:title="Requests"/>
+
+</menu>
