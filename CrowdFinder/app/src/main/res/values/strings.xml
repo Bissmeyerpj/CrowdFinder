@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">CrowdFinder</string>
+    <string name="email_hint">EMAIL</string>
+    <string name="password_hint">PASSWORD</string>
+    <string name="login_button_text">LOGIN</string>
+    <string name="sign_up_button">SIGN UP</string>
+    <string name="stay_logged_in">Stay Logged In</string>
+    <string name="title_activity_bottom_nav">BottomNavActivity</string>
 </resources>
