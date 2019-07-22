@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
+            "outputFile": "C:\\Users\\warninjd\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\8db15cd8dceffff7ff82585ecfafef6f\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\warninjd\\.gradle\\caches\\transforms-2\\files-2.1\\679dd226deef06660e10c31b7490d01c\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\1e7cab745f45568f89f39bb4f5515d0e\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\warninjd\\.gradle\\caches\\transforms-2\\files-2.1\\5874bcc2c8e30e33de155e0a252fe63a\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,19,32,33,34,35,36",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4",

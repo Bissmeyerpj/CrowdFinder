@@ -8,7 +8,13 @@ import android.support.v7.app.AppCompatActivity;
 
 import kotlinx.android.synthetic.main.activity_bottom_nav.*
 
-class BottomNavActivity : AppCompatActivity(), FriendListFragment.OnFriendSelectedListener {
+class BottomNavActivity : AppCompatActivity(),
+        FriendListFragment.OnFriendSelectedListener,
+        RequestListFragment.OnRequestSelectedListener
+{
+    override fun onRequestSelected(request: Request) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
 
     private var currentFriend = Friend("Dummy Name")
 
@@ -29,7 +35,7 @@ class BottomNavActivity : AppCompatActivity(), FriendListFragment.OnFriendSelect
                 switchTo = FriendListFragment()
             }
             R.id.requests -> {
-
+                switchTo = RequestListFragment()
             }
         }
         switchTo?.let {

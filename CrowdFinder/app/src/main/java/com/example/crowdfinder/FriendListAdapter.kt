@@ -25,8 +25,8 @@ class FriendListAdapter(var context: Context?, var listener: FriendListFragment.
     }
     override fun getItemCount() = friends.size
 
-    fun selectDocAt(adapterPosition: Int) {
-        val doc = friends[adapterPosition]
-        listener?.onFriendSelected(doc)
+    fun selectFriendAt(adapterPosition: Int) {
+        val friend = friends[adapterPosition]
+        listener?.onFriendSelected(friend)
     }
 }

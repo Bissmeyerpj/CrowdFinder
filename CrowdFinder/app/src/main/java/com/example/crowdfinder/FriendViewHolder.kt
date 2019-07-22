@@ -10,7 +10,7 @@ class FriendViewHolder(itemView: View, adapter: FriendListAdapter) : RecyclerVie
 
     init {
         itemView.setOnClickListener {
-            adapter.selectDocAt(adapterPosition)
+            adapter.selectFriendAt(adapterPosition)
         }
     }
 

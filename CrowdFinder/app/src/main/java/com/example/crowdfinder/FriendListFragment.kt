@@ -30,7 +30,7 @@ class FriendListFragment : Fragment() {
         if (context is OnFriendSelectedListener) {
             listener = context
         } else {
-            throw RuntimeException(context.toString() + " must implement OnDocSelectedListener")
+            throw RuntimeException(context.toString() + " must implement OnFriendSelectedListener")
         }
     }
 

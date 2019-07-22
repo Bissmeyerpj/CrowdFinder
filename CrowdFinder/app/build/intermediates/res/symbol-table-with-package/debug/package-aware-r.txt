@@ -1087,6 +1087,8 @@ id container
 id content
 id contentPanel
 id coordinator
+id current_distance_textview
+id currently_tracked_friend_textview
 id custom
 id customPanel
 id decor_content_parent
@@ -1100,6 +1102,7 @@ id dimensions
 id direct
 id disableHome
 id distance_layout
+id distance_textview
 id distance_toggle_button
 id edit_query
 id email_edit_text
@@ -1182,6 +1185,9 @@ id progress_circular
 id progress_horizontal
 id radio
 id recycler_view
+id request_accept_button
+id request_decline_button
+id request_name_text_view
 id requests
 id right
 id right_icon
@@ -1248,6 +1254,7 @@ id time
 id title
 id titleDividerNoCustom
 id title_template
+id title_textview
 id top
 id topPanel
 id touch_outside
@@ -1329,7 +1336,9 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
+layout fragment_compass
 layout fragment_friend_list
+layout fragment_request_list
 layout fragment_settings
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
@@ -1349,6 +1358,7 @@ layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
 layout row_view_friend
+layout row_view_request
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
@@ -1401,6 +1411,9 @@ string bottom_sheet_behavior
 string change
 string character_counter_content_description
 string character_counter_pattern
+string currently_tracking
+string distance
+string dummy_distance
 string email
 string email_hint
 string fab_transformation_scrim_behavior
@@ -1415,6 +1428,7 @@ string merica
 string metric
 string metric_u_s
 string mtrl_chip_close_icon_content_description
+string name
 string nickname
 string night_mode
 string notify
