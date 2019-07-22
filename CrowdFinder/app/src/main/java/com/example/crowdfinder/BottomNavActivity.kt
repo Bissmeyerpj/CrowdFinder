@@ -8,7 +8,11 @@ import android.support.v7.app.AppCompatActivity;
 
 import kotlinx.android.synthetic.main.activity_bottom_nav.*
 
-class BottomNavActivity : AppCompatActivity() {
+class BottomNavActivity : AppCompatActivity(), FriendListFragment.OnFriendSelectedListener {
+
+    override fun onFriendSelected(friend: Friend) {
+        TODO("not implemented")
+    }
 
     private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         var switchTo: Fragment? = null
@@ -20,7 +24,7 @@ class BottomNavActivity : AppCompatActivity() {
 
             }
             R.id.friends -> {
-
+                switchTo = FriendListFragment()
             }
             R.id.requests -> {
 
@@ -45,6 +49,9 @@ class BottomNavActivity : AppCompatActivity() {
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
+
+        val navView: BottomNavigationView = findViewById(R.id.nav_view)
+        navView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
 
         val frag = SettingsFragment()
         val ft = supportFragmentManager.beginTransaction()
