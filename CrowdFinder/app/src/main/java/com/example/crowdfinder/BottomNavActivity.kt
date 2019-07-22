@@ -10,6 +10,8 @@ import kotlinx.android.synthetic.main.activity_bottom_nav.*
 
 class BottomNavActivity : AppCompatActivity(), FriendListFragment.OnFriendSelectedListener {
 
+    private var currentFriend = Friend("Dummy Name")
+
     override fun onFriendSelected(friend: Friend) {
         TODO("not implemented")
     }
@@ -21,7 +23,7 @@ class BottomNavActivity : AppCompatActivity(), FriendListFragment.OnFriendSelect
                 switchTo = SettingsFragment()
             }
             R.id.compass -> {
-
+                switchTo = CompassFragment()
             }
             R.id.friends -> {
                 switchTo = FriendListFragment()
@@ -53,7 +55,7 @@ class BottomNavActivity : AppCompatActivity(), FriendListFragment.OnFriendSelect
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
         navView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
 
-        val frag = SettingsFragment()
+        val frag = CompassFragment()
         val ft = supportFragmentManager.beginTransaction()
         ft.replace(R.id.fragment_container, frag, "MY_FRAGMENT")
         ft.commit()
