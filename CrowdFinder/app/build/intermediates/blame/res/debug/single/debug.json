@@ -16,12 +16,12 @@
         "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\1e7cab745f45568f89f39bb4f5515d0e\\res\\drawable-xhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
     },
     {
-        "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
-        "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\1e7cab745f45568f89f39bb4f5515d0e\\res\\drawable-hdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
-    },
-    {
         "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_tint_edittext.xml.flat",
         "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\1e7cab745f45568f89f39bb4f5515d0e\\res\\color\\abc_tint_edittext.xml"
+    },
+    {
+        "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
+        "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\1e7cab745f45568f89f39bb4f5515d0e\\res\\drawable-hdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
         "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_star_black_16dp.png.flat",
@@ -32,16 +32,20 @@
         "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\1e7cab745f45568f89f39bb4f5515d0e\\res\\color\\abc_secondary_text_material_light.xml"
     },
     {
-        "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
-        "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\1e7cab745f45568f89f39bb4f5515d0e\\res\\drawable-xxxhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
-    },
-    {
         "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_btn_text_btn_ripple_color.xml.flat",
         "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\a3ec1924941a05e8b30d466a4049fba5\\res\\color\\mtrl_btn_text_btn_ripple_color.xml"
     },
     {
+        "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
+        "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\1e7cab745f45568f89f39bb4f5515d0e\\res\\drawable-xxxhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
+    },
+    {
         "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\animator_mtrl_chip_state_list_anim.xml.flat",
         "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\a3ec1924941a05e8b30d466a4049fba5\\res\\animator\\mtrl_chip_state_list_anim.xml"
+    },
+    {
+        "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_friend_list.xml.flat",
+        "source": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\src\\main\\res\\layout\\fragment_friend_list.xml"
     },
     {
         "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\layout_select_dialog_multichoice_material.xml.flat",
@@ -50,6 +54,10 @@
     {
         "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
         "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\1e7cab745f45568f89f39bb4f5515d0e\\res\\drawable-xxhdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\layout_row_view_friend.xml.flat",
+        "source": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\src\\main\\res\\layout\\row_view_friend.xml"
     },
     {
         "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
@@ -84,16 +92,16 @@
         "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\a3ec1924941a05e8b30d466a4049fba5\\res\\drawable-mdpi-v4\\design_ic_visibility_off.png"
     },
     {
-        "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_select_dialog_material.xml.flat",
-        "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\1e7cab745f45568f89f39bb4f5515d0e\\res\\layout\\abc_select_dialog_material.xml"
+        "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_background_cache_hint_selector_material_light.xml.flat",
+        "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\1e7cab745f45568f89f39bb4f5515d0e\\res\\color\\abc_background_cache_hint_selector_material_light.xml"
     },
     {
         "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21_notification_action.xml.flat",
         "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\1a2abefb8f8c7333526194b8f28be406\\res\\layout-v21\\notification_action.xml"
     },
     {
-        "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_background_cache_hint_selector_material_light.xml.flat",
-        "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\1e7cab745f45568f89f39bb4f5515d0e\\res\\color\\abc_background_cache_hint_selector_material_light.xml"
+        "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_select_dialog_material.xml.flat",
+        "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\1e7cab745f45568f89f39bb4f5515d0e\\res\\layout\\abc_select_dialog_material.xml"
     },
     {
         "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
@@ -160,12 +168,12 @@
         "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\1a2abefb8f8c7333526194b8f28be406\\res\\drawable-hdpi-v4\\notification_bg_low_normal.9.png"
     },
     {
-        "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_shrink_fade_out_from_bottom.xml.flat",
-        "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\1e7cab745f45568f89f39bb4f5515d0e\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
-    },
-    {
         "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_text_select_handle_left_mtrl_dark.png.flat",
         "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\1e7cab745f45568f89f39bb4f5515d0e\\res\\drawable-xxxhdpi-v4\\abc_text_select_handle_left_mtrl_dark.png"
+    },
+    {
+        "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_shrink_fade_out_from_bottom.xml.flat",
+        "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\1e7cab745f45568f89f39bb4f5515d0e\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
     },
     {
         "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-hdpi-v17_abc_ic_menu_cut_mtrl_alpha.png.flat",
@@ -220,12 +228,12 @@
         "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\1e7cab745f45568f89f39bb4f5515d0e\\res\\drawable-mdpi-v4\\abc_ic_star_black_48dp.png"
     },
     {
-        "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\layout_content_bottom_nav.xml.flat",
-        "source": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\src\\main\\res\\layout\\content_bottom_nav.xml"
-    },
-    {
         "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_btn_colored_text_material.xml.flat",
         "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\1e7cab745f45568f89f39bb4f5515d0e\\res\\color\\abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\layout_content_bottom_nav.xml.flat",
+        "source": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\src\\main\\res\\layout\\content_bottom_nav.xml"
     },
     {
         "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
@@ -312,24 +320,24 @@
         "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\1e7cab745f45568f89f39bb4f5515d0e\\res\\drawable-mdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\color-v23_abc_tint_btn_checkable.xml.flat",
-        "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\1e7cab745f45568f89f39bb4f5515d0e\\res\\color-v23\\abc_tint_btn_checkable.xml"
-    },
-    {
         "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_lines_media.xml.flat",
         "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\63c6cb305d725fcb6fbcb850cdcfcf33\\res\\layout\\notification_template_lines_media.xml"
     },
     {
-        "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ic_ab_back_material.xml.flat",
-        "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\1e7cab745f45568f89f39bb4f5515d0e\\res\\drawable\\abc_ic_ab_back_material.xml"
+        "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\color-v23_abc_tint_btn_checkable.xml.flat",
+        "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\1e7cab745f45568f89f39bb4f5515d0e\\res\\color-v23\\abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_star_half_black_48dp.png.flat",
+        "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\1e7cab745f45568f89f39bb4f5515d0e\\res\\drawable-xhdpi-v4\\abc_ic_star_half_black_48dp.png"
     },
     {
         "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
         "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\1e7cab745f45568f89f39bb4f5515d0e\\res\\drawable-xhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
     },
     {
-        "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_star_half_black_48dp.png.flat",
-        "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\1e7cab745f45568f89f39bb4f5515d0e\\res\\drawable-xhdpi-v4\\abc_ic_star_half_black_48dp.png"
+        "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ic_ab_back_material.xml.flat",
+        "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\1e7cab745f45568f89f39bb4f5515d0e\\res\\drawable\\abc_ic_ab_back_material.xml"
     },
     {
         "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_cab_background_top_material.xml.flat",
@@ -448,12 +456,12 @@
         "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\1e7cab745f45568f89f39bb4f5515d0e\\res\\drawable-xhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
-        "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_popup_enter.xml.flat",
-        "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\1e7cab745f45568f89f39bb4f5515d0e\\res\\anim\\abc_popup_enter.xml"
-    },
-    {
         "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\1e7cab745f45568f89f39bb4f5515d0e\\res\\drawable-xxhdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_popup_enter.xml.flat",
+        "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\1e7cab745f45568f89f39bb4f5515d0e\\res\\anim\\abc_popup_enter.xml"
     },
     {
         "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\color_design_error.xml.flat",
@@ -500,12 +508,12 @@
         "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\a3ec1924941a05e8b30d466a4049fba5\\res\\layout\\design_navigation_item_header.xml"
     },
     {
-        "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_tabs_icon_color_selector.xml.flat",
-        "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\a3ec1924941a05e8b30d466a4049fba5\\res\\color\\mtrl_tabs_icon_color_selector.xml"
-    },
-    {
         "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\layout-watch-v20_abc_alert_dialog_title_material.xml.flat",
         "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\1e7cab745f45568f89f39bb4f5515d0e\\res\\layout-watch-v20\\abc_alert_dialog_title_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_tabs_icon_color_selector.xml.flat",
+        "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\a3ec1924941a05e8b30d466a4049fba5\\res\\color\\mtrl_tabs_icon_color_selector.xml"
     },
     {
         "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_text_select_handle_left_mtrl_dark.png.flat",
@@ -516,12 +524,12 @@
         "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\1e7cab745f45568f89f39bb4f5515d0e\\res\\drawable\\abc_ratingbar_indicator_material.xml"
     },
     {
-        "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
-        "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\1e7cab745f45568f89f39bb4f5515d0e\\res\\drawable-xxxhdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
-    },
-    {
         "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
         "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\1e7cab745f45568f89f39bb4f5515d0e\\res\\drawable-xxhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
+        "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\1e7cab745f45568f89f39bb4f5515d0e\\res\\drawable-xxxhdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
     },
     {
         "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_scrubber_control_off_mtrl_alpha.png.flat",
@@ -552,12 +560,12 @@
         "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\1e7cab745f45568f89f39bb4f5515d0e\\res\\drawable-ldrtl-hdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
-        "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable_navigation_empty_icon.xml.flat",
-        "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\a3ec1924941a05e8b30d466a4049fba5\\res\\drawable\\navigation_empty_icon.xml"
-    },
-    {
         "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_text_select_handle_middle_mtrl_light.png.flat",
         "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\1e7cab745f45568f89f39bb4f5515d0e\\res\\drawable-mdpi-v4\\abc_text_select_handle_middle_mtrl_light.png"
+    },
+    {
+        "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable_navigation_empty_icon.xml.flat",
+        "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\a3ec1924941a05e8b30d466a4049fba5\\res\\drawable\\navigation_empty_icon.xml"
     },
     {
         "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
