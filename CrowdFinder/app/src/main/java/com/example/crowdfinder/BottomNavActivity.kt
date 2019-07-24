@@ -60,6 +60,7 @@ class BottomNavActivity : AppCompatActivity(),
 
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
         navView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
+        navView.selectedItemId = R.id.compass
 
         val frag = CompassFragment()
         val ft = supportFragmentManager.beginTransaction()

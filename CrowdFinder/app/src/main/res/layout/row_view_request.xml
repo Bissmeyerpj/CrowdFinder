@@ -11,6 +11,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:background="@color/brightOrange"
     >
 
         <TextView
@@ -21,7 +22,7 @@
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
                 android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
+                android:textColor="@color/darkBlue"
         />
 
         <Button
@@ -32,6 +33,10 @@
                 android:layout_alignParentRight="true"
                 android:text="Accept"
                 android:textSize="24sp"
+                android:textColor="@color/brightOrange"
+                android:background="@color/darkBlue"
+                android:layout_margin="3dp"
+                android:padding="5dp"
         />
 
         <Button
@@ -43,6 +48,10 @@
                 android:layout_height="wrap_content"
                 android:text="Decline"
                 android:textSize="24sp"
+                android:textColor="@color/brightOrange"
+                android:background="@color/darkBlue"
+                android:layout_margin="3dp"
+                android:padding="5dp"
         />
 
     </RelativeLayout>

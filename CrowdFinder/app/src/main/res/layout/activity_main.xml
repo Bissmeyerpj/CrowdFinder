@@ -6,7 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity"
-        android:background="@color/background"
+        android:background="@color/lightBlue"
 >
 
     <ImageView
@@ -27,7 +27,7 @@
             android:textSize="24sp"
             android:hint="@string/email_hint"
             android:textAlignment="center"
-            android:background="@color/logoAccent"
+            android:background="@color/brightOrange"
             android:paddingVertical="10dp"
     />
 
@@ -41,7 +41,7 @@
             android:hint="@string/password_hint"
             android:layout_marginVertical="10dp"
             android:textAlignment="center"
-            android:background="@color/logoAccent"
+            android:background="@color/brightOrange"
             android:paddingVertical="10dp"
     />
 
@@ -72,14 +72,14 @@
             android:layout_height="wrap_content"
             android:textSize="24sp"
             android:text="@string/login_button_text"
-            android:textColor="@color/logoAccent"
+            android:textColor="@color/brightOrange"
             android:textStyle="bold"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/linearLayout"
             android:paddingHorizontal="20dp"
             android:paddingVertical="10dp"
             android:layout_marginTop="20dp"
-            android:background="@color/loginButton"
+            android:background="@color/darkBlue"
     />
 
     <Button
@@ -89,7 +89,7 @@
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:text="@string/sign_up_button"
-            android:textColor="@color/loginButton"
+            android:textColor="@color/darkBlue"
             android:textStyle="bold"
             android:layout_centerHorizontal="true"
             android:layout_below="@id/login_button"

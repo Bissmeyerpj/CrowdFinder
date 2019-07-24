@@ -11,6 +11,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:background="@color/brightOrange"
     >
 
         <TextView
@@ -20,6 +21,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
+                android:textColor="@color/darkBlue"
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
         />
@@ -31,6 +33,10 @@
                 android:layout_centerVertical="true"
                 android:text="Request"
                 android:textSize="24sp"
+                android:textColor="@color/brightOrange"
+                android:background="@color/darkBlue"
+                android:layout_margin="3dp"
+                android:padding="5dp"
         />
 
     </RelativeLayout>

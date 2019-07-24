@@ -6,7 +6,7 @@
         android:layout_height="match_parent"
         tools:context=".SettingsFragment"
         android:padding="25dp"
-        android:background="@color/background"
+        android:background="@color/lightBlue"
 >
 
     <TextView

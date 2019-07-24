@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\warninjd\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-port\\values-port.xml",
+            "outputFile": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-port\\values-port.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\warninjd\\.gradle\\caches\\transforms-2\\files-2.1\\5874bcc2c8e30e33de155e0a252fe63a\\res\\values-port\\values-port.xml",
+                    "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\1e7cab745f45568f89f39bb4f5515d0e\\res\\values-port\\values-port.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
