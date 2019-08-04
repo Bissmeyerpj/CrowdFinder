@@ -15,5 +15,10 @@ class MainActivity : AppCompatActivity() {
             val bottomNavIntent = Intent(this, BottomNavActivity::class.java)
             startActivity(bottomNavIntent)
         }
+
+        sign_up_button.setOnClickListener {
+            val createAccountIntent = Intent(this, CreateAccountActivity::class.java)
+            startActivity(createAccountIntent)
+        }
     }
 }

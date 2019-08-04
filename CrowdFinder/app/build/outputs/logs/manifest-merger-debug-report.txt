@@ -1,12 +1,17 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:2:1-26:12
+ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:2:1-31:12
 MERGED from [com.android.support:design:28.0.0] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\a3ec1924941a05e8b30d466a4049fba5\AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\1e7cab745f45568f89f39bb4f5515d0e\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\80458fef242d78cce4f0a3be64409bc5\AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.gms:play-services-location:16.0.0] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\a1211b8cb65fc101b6def0d04643a64d\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\f439b8657dfc6d8389c0826ce2e2cd69\AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\cfaad6e4948e9e4bad7a85b0156c3983\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\a4db3ae0faee0a5b76430129ffd67e3d\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\8974a5c4a7218d1775363ed7067db974\AndroidManifest.xml:17:1-28:12
 MERGED from [com.android.support:support-v4:28.0.0] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\9ab84db0572d397cef50c57a02e4807c\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\58a432dd2d459c03c1bab6020d3d283b\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\83c144a45fde494b1fd8f2bae5b57d65\AndroidManifest.xml:17:1-22:12
@@ -37,29 +42,47 @@ MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Phil\.gradle\cach
 MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\0e0bb5b454b8f38ecde9f2109331bced\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\8d93a97115731dc588ac89ebda296295\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\d5269a7bb1eadbd3ba225551e8213321\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:2:1-31:12
 	package
 		ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:3:11-44
 		INJECTED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:2:1-26:12
+		ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:2:1-31:12
 		INJECTED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:2:1-26:12
+		ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:2:1-31:12
 		INJECTED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:5:5-78
+	android:name
+		ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:5:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:6:5-80
+	android:name
+		ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:6:22-78
 application
-ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:5:5-24:19
+ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:8:5-29:19
 MERGED from [com.android.support:design:28.0.0] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\a3ec1924941a05e8b30d466a4049fba5\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:28.0.0] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\a3ec1924941a05e8b30d466a4049fba5\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\80458fef242d78cce4f0a3be64409bc5\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\80458fef242d78cce4f0a3be64409bc5\AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.gms:play-services-location:16.0.0] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\a1211b8cb65fc101b6def0d04643a64d\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:16.0.0] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\a1211b8cb65fc101b6def0d04643a64d\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\f439b8657dfc6d8389c0826ce2e2cd69\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\f439b8657dfc6d8389c0826ce2e2cd69\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\cfaad6e4948e9e4bad7a85b0156c3983\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\cfaad6e4948e9e4bad7a85b0156c3983\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\a4db3ae0faee0a5b76430129ffd67e3d\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\a4db3ae0faee0a5b76430129ffd67e3d\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\8974a5c4a7218d1775363ed7067db974\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\8974a5c4a7218d1775363ed7067db974\AndroidManifest.xml:22:5-26:19
 MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\1a2abefb8f8c7333526194b8f28be406\AndroidManifest.xml:22:5-94
 MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\1a2abefb8f8c7333526194b8f28be406\AndroidManifest.xml:22:5-94
 MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\902ce3a58a42a24584ab02dc087ed9a4\AndroidManifest.xml:22:5-23:19
@@ -67,39 +90,43 @@ MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Phil\.grad
 	android:appComponentFactory
 		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\1a2abefb8f8c7333526194b8f28be406\AndroidManifest.xml:22:18-91
 	android:supportsRtl
-		ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:10:13-39
+		ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:13:13-39
 	android:label
-		ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:8:13-45
+		ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:11:13-45
 	android:roundIcon
-		ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:9:13-58
+		ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:12:13-58
 	android:icon
-		ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:7:13-47
+		ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:10:13-47
 	android:allowBackup
-		ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:6:13-39
+		ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:9:13-39
 	android:theme
-		ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:11:13-44
+		ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:14:13-44
+activity#com.example.crowdfinder.CreateAccountActivity
+ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:15:9-16:20
+	android:name
+		ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:15:19-56
 activity#com.example.crowdfinder.BottomNavActivity
-ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:12:9-16:20
+ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:17:9-21:20
 	android:label
-		ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:14:17-66
+		ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:19:17-66
 	android:theme
-		ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:15:17-60
+		ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:20:17-60
 	android:name
-		ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:13:17-50
+		ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:18:17-50
 activity#com.example.crowdfinder.MainActivity
-ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:17:9-23:20
+ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:22:9-28:20
 	android:name
-		ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:17:19-47
+		ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:22:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:18:13-22:29
+ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:23:13-27:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:19:17-68
+ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:24:17-68
 	android:name
-		ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:19:25-66
+		ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:24:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:21:17-76
+ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:26:17-76
 	android:name
-		ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:21:27-74
+		ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml:26:27-74
 uses-sdk
 INJECTED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml
@@ -110,6 +137,16 @@ MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Phil\.gradle\cach
 MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\1e7cab745f45568f89f39bb4f5515d0e\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\80458fef242d78cce4f0a3be64409bc5\AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\80458fef242d78cce4f0a3be64409bc5\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-location:16.0.0] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\a1211b8cb65fc101b6def0d04643a64d\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:16.0.0] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\a1211b8cb65fc101b6def0d04643a64d\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\f439b8657dfc6d8389c0826ce2e2cd69\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\f439b8657dfc6d8389c0826ce2e2cd69\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\cfaad6e4948e9e4bad7a85b0156c3983\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\cfaad6e4948e9e4bad7a85b0156c3983\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\a4db3ae0faee0a5b76430129ffd67e3d\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\a4db3ae0faee0a5b76430129ffd67e3d\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\8974a5c4a7218d1775363ed7067db974\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\8974a5c4a7218d1775363ed7067db974\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-v4:28.0.0] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\9ab84db0572d397cef50c57a02e4807c\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-v4:28.0.0] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\9ab84db0572d397cef50c57a02e4807c\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\58a432dd2d459c03c1bab6020d3d283b\AndroidManifest.xml:20:5-44
@@ -180,3 +217,17 @@ INJECTED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\sr
 		INJECTED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml
 		ADDED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Phil\AndroidStudioProjects\CrowdFinder\CrowdFinder\app\src\main\AndroidManifest.xml
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\f439b8657dfc6d8389c0826ce2e2cd69\AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\f439b8657dfc6d8389c0826ce2e2cd69\AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\f439b8657dfc6d8389c0826ce2e2cd69\AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\f439b8657dfc6d8389c0826ce2e2cd69\AndroidManifest.xml:24:13-79
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\8974a5c4a7218d1775363ed7067db974\AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\8974a5c4a7218d1775363ed7067db974\AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\Phil\.gradle\caches\transforms-2\files-2.1\8974a5c4a7218d1775363ed7067db974\AndroidManifest.xml:24:13-58
