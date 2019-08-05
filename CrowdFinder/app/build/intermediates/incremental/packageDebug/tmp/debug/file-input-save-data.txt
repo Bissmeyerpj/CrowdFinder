@@ -1,11 +1,15 @@
 #Internal package file, do not edit.
-#Sun Aug 04 12:51:17 EDT 2019
+#Sun Aug 04 23:42:31 EDT 2019
 1.base=C\:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out
+2.path=classes2.dex
 0.baseType=DIRECTORY
+2.base=C\:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out
+2.set=DEX
 1.baseType=DIRECTORY
-count=2
+count=3
 1.set=DEX
 0.path=classes.dex
 0.set=DEX
 0.base=C\:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out
+2.baseType=DIRECTORY
 1.path=classes.dex

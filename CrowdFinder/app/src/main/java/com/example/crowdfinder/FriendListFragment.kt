@@ -9,8 +9,13 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.google.firebase.firestore.CollectionReference
+import com.google.firebase.firestore.DocumentReference
+import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.android.synthetic.main.activity_main.*
 
 class FriendListFragment : Fragment() {
+
     private var listener: OnFriendSelectedListener? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -42,6 +47,7 @@ class FriendListFragment : Fragment() {
 
     interface OnFriendSelectedListener {
         fun onFriendSelected(friend: Friend)
+        fun getEmail() : String
     }
 
 }

@@ -1,3 +1,3 @@
 package com.example.crowdfinder
 
-data class Friend(var name: String = "")
+data class Friend(val name: String = "", val email: String = "")

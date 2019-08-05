@@ -12,6 +12,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
+import com.google.firebase.firestore.DocumentReference
+import com.google.firebase.firestore.FirebaseFirestore
 
 import kotlinx.android.synthetic.main.activity_bottom_nav.*
 
@@ -21,17 +23,9 @@ class BottomNavActivity : AppCompatActivity(),
         CompassFragment.LocationStringListener
 {
 
+    private lateinit var email: String
     private var locationString = ""
-
-    override fun onRequestSelected(request: Request) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
     private var currentFriend = Friend("Dummy Name")
-
-    override fun onFriendSelected(friend: Friend) {
-        TODO("not implemented")
-    }
 
     private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         var switchTo: Fragment? = null
@@ -80,6 +74,8 @@ class BottomNavActivity : AppCompatActivity(),
         val ft = supportFragmentManager.beginTransaction()
         ft.replace(R.id.fragment_container, frag, "MY_FRAGMENT")
         ft.commit()
+
+        email = intent.extras.getString("email")
     }
 
     private lateinit var fusedLocationClient: FusedLocationProviderClient
@@ -97,5 +93,17 @@ class BottomNavActivity : AppCompatActivity(),
     }
 
     override fun getLocation(): String = locationString
+
+    override fun onRequestSelected(request: Request) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun onFriendSelected(friend: Friend) {
+        TODO("not implemented")
+    }
+
+    override fun getEmail(): String {
+        return email
+    }
 
 }
