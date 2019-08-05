@@ -103,11 +103,26 @@ class BottomNavActivity : AppCompatActivity(),
     }
 
     override fun onFriendSelected(friend: Friend) {
-        TODO("not implemented")
+        currentFriend = friend
+        val friendLocationRef = FirebaseFirestore.
+            getInstance().
+            collection(Constants.LOCATIONS).
+            document(currentFriend.email)
+
+        friendLocationRef.get().addOnSuccessListener {
+            locationString = it.get(Constants.LATLONG).toString()
+        }
+        val ft = supportFragmentManager.beginTransaction()
+        ft.replace(R.id.fragment_container, CompassFragment(), "MY_FRAGMENT")
+        ft.commit()
     }
 
     override fun getEmail(): String {
         return email
+    }
+
+    override fun getFriend(): Friend {
+        return currentFriend
     }
 
 }

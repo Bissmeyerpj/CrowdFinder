@@ -15,11 +15,12 @@ import kotlinx.android.synthetic.main.row_view_friend.view.*
 
 class CompassFragment : Fragment() {
 
-    val friend = Friend("MyFriend")
-    lateinit var text: String
+    var friend:Friend? = Friend("MyFriend")
+    var location: String? = "Lat : Long"
 
     private var listener: LocationStringListener? = null
     interface LocationStringListener {
+        fun getFriend(): Friend
         fun getLocation(): String
     }
 
@@ -30,8 +31,13 @@ class CompassFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_compass, container, false)
-        view.currently_tracked_friend_textview.text = friend.name
-        view.current_distance_textview.text = listener?.getLocation()
+        location = listener?.getLocation()
+        view.current_distance_textview.text = location
+
+
+        friend = listener?.getFriend()
+        view.currently_tracked_friend_textview.text = friend?.name
+
         return view
     }
 
@@ -39,6 +45,7 @@ class CompassFragment : Fragment() {
         super.onAttach(context)
         if (context is LocationStringListener) {
             listener = context
+            view?.current_distance_textview?.text = listener?.getLocation()
             Log.d(Constants.TAG, "context is listener")
         } else {
             throw RuntimeException(context.toString() + " must implement LocationStringListener")
