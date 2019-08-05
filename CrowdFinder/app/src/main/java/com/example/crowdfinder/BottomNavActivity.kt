@@ -26,6 +26,7 @@ class BottomNavActivity : AppCompatActivity(),
     private lateinit var email: String
     private var locationString = ""
     private var currentFriend = Friend("Dummy Name")
+    private lateinit var locationRef: DocumentReference
 
     private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         var switchTo: Fragment? = null
@@ -76,6 +77,7 @@ class BottomNavActivity : AppCompatActivity(),
         ft.commit()
 
         email = intent.extras.getString("email")
+        locationRef = FirebaseFirestore.getInstance().collection(Constants.LOCATIONS).document(email)
     }
 
     private lateinit var fusedLocationClient: FusedLocationProviderClient
@@ -85,7 +87,9 @@ class BottomNavActivity : AppCompatActivity(),
         fusedLocationClient.lastLocation
             .addOnSuccessListener { location: Location? ->
                 Log.d(Constants.TAG, "Successful location")
-                locationString = location?.latitude.toString() + " : " + location?.longitude.toString()
+                val thingy = location?.latitude.toString() + " : " + location?.longitude.toString()
+                val map = mapOf<String, Any>(Constants.LATLONG to thingy)
+                locationRef.set(map)
             }
             .addOnFailureListener {
                 Log.d(Constants.TAG, "Failed location")
