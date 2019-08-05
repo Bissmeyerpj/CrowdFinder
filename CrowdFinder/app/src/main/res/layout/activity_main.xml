@@ -29,6 +29,7 @@
             android:textAlignment="center"
             android:background="@color/brightOrange"
             android:paddingVertical="10dp"
+            android:inputType="textEmailAddress"
     />
 
     <EditText
@@ -43,6 +44,8 @@
             android:textAlignment="center"
             android:background="@color/brightOrange"
             android:paddingVertical="10dp"
+            android:inputType="textPassword"
+
     />
 
     <LinearLayout
