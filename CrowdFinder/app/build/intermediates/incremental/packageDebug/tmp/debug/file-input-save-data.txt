@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Aug 05 17:45:52 EDT 2019
+#Mon Aug 05 18:19:09 EDT 2019
 1.base=C\:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out
 2.path=classes2.dex
 0.baseType=DIRECTORY

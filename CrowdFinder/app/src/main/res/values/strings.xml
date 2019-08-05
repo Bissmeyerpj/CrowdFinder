@@ -24,4 +24,5 @@
     <string name="dummy_distance">1234 Meters</string>
     <string name="distance">Distance:</string>
     <string name="nickname_hint">NICKNAME</string>
+    <string name="add_friend_title">Add a Friend by Email</string>
 </resources>

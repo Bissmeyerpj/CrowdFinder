@@ -1098,6 +1098,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id add_friend_email
 id adjust_height
 id adjust_width
 id alertTitle
@@ -1384,6 +1385,7 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
+layout dialog_add_friend
 layout fragment_compass
 layout fragment_friend_list
 layout fragment_request_list
@@ -1453,6 +1455,7 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string add_friend_title
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
