@@ -8,20 +8,22 @@ import android.view.ViewGroup
 import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.FirebaseFirestore
 
-class FriendListAdapter(var context: Context?, var listener: FriendListFragment.OnFriendSelectedListener?) : RecyclerView.Adapter<FriendViewHolder>() {
+class FriendListAdapter(var context: Context?, var listener: FriendListFragment.OnFriendSelectedListener?, var email: String) : RecyclerView.Adapter<FriendViewHolder>() {
 
     var friends = ArrayList<Friend>()
     var friendRef = FirebaseFirestore.getInstance().collection(Constants.USERS)
-        .document(listener!!.getEmail()).collection(Constants.FRIENDS)
+        .document(email).collection(Constants.FRIENDS)
+    val usersRef = FirebaseFirestore.getInstance().collection(Constants.USERS)
 
     init {
         friendRef.get().addOnSuccessListener { result ->
             for(doc in result) {
-                val text = String.format("email: %s, nickname: %s", doc.id, doc.get("nickname"))
-                Log.d(Constants.TAG, text)
-                friends.add(Friend(doc.get("nickname").toString(), doc.id))
+                usersRef.document(doc.id).get().addOnSuccessListener {
+                    friends.add(Friend(it.getString(Constants.NICKNAME)?:"", doc.id))
+                    notifyDataSetChanged()
+                }
             }
-            notifyDataSetChanged()
+
         }
     }
 

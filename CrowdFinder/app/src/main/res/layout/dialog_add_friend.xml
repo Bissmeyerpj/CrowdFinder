@@ -11,7 +11,7 @@
             android:layout_height="wrap_content"
             android:textSize="24sp"
             android:hint="@string/email_hint"
-            android:inputType="textCapSentences"
+            android:inputType="textEmailAddress"
     />
 
 </LinearLayout>

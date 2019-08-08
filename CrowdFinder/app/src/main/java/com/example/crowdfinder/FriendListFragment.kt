@@ -6,13 +6,11 @@ import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.google.firebase.firestore.CollectionReference
-import com.google.firebase.firestore.DocumentReference
-import com.google.firebase.firestore.FirebaseFirestore
-import kotlinx.android.synthetic.main.activity_main.*
+
 
 class FriendListFragment : Fragment() {
 
@@ -22,7 +20,8 @@ class FriendListFragment : Fragment() {
                               savedInstanceState: Bundle?
     ): View? {
         val recyclerView = inflater.inflate(R.layout.fragment_friend_list, container, false) as RecyclerView
-        val adapter = FriendListAdapter(context, listener)
+        val email = listener?.getEmail() ?: "admin"
+        val adapter = FriendListAdapter(context, listener, email)
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(context)
         recyclerView.setHasFixedSize(true)

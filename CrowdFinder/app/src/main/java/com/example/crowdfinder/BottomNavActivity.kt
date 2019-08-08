@@ -12,25 +12,31 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log
 import android.view.LayoutInflater
 import android.widget.Toast
+import com.firebase.ui.auth.AuthUI
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
 
 import kotlinx.android.synthetic.main.activity_bottom_nav.*
+import kotlinx.android.synthetic.main.content_bottom_nav.*
 import kotlinx.android.synthetic.main.dialog_add_friend.view.*
 
 class BottomNavActivity : AppCompatActivity(),
         FriendListFragment.OnFriendSelectedListener,
         RequestListFragment.OnRequestSelectedListener,
         CompassFragment.LocationStringListener,
-        SettingsFragment.SettingsListener
+        SettingsFragment.SettingsListener,
+        SplashFragment.OnLoginButtonPressedListener
 {
 
     private lateinit var email: String
     private var locationString = ""
     private var currentFriend = Friend("Dummy Name")
-    private lateinit var locationRef: DocumentReference
+    private var locationRef = FirebaseFirestore.getInstance().collection(Constants.LOCATIONS)
     val usersRef = FirebaseFirestore.getInstance().collection(Constants.USERS)
 
     private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
@@ -50,13 +56,15 @@ class BottomNavActivity : AppCompatActivity(),
                 switchTo = RequestListFragment()
             }
         }
-        switchTo?.let {
-            val ft = supportFragmentManager.beginTransaction()
-            ft.replace(R.id.fragment_container, switchTo, "MY_FRAGMENT")
-            while(supportFragmentManager.backStackEntryCount > 0) {
-                supportFragmentManager.popBackStackImmediate()
+        if (auth.currentUser != null) {
+            switchTo?.let {
+                val ft = supportFragmentManager.beginTransaction()
+                ft.replace(R.id.fragment_container, switchTo, "MY_FRAGMENT")
+                while (supportFragmentManager.backStackEntryCount > 0) {
+                    supportFragmentManager.popBackStackImmediate()
+                }
+                ft.commit()
             }
-            ft.commit()
         }
         true
     }
@@ -64,11 +72,11 @@ class BottomNavActivity : AppCompatActivity(),
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bottom_nav)
-
+        initializeListeners()
         fab.setOnClickListener { view ->
             handleFabClick()
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+//            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                .setAction("Action", null).show()
         }
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
@@ -77,13 +85,10 @@ class BottomNavActivity : AppCompatActivity(),
         navView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
         navView.selectedItemId = R.id.friends
 
-        val frag = FriendListFragment()
-        val ft = supportFragmentManager.beginTransaction()
-        ft.replace(R.id.fragment_container, frag, "MY_FRAGMENT")
-        ft.commit()
-
-        email = intent.extras.getString("email")
-        locationRef = FirebaseFirestore.getInstance().collection(Constants.LOCATIONS).document(email)
+        if(auth.currentUser!=null) {
+            email = auth.currentUser?.email.toString()
+            Log.d(Constants.TAG, auth.currentUser?.displayName.toString())
+        }
     }
 
     private lateinit var fusedLocationClient: FusedLocationProviderClient
@@ -95,10 +100,10 @@ class BottomNavActivity : AppCompatActivity(),
                 Log.d(Constants.TAG, "Successful location")
                 val thingy = location?.latitude.toString() + " : " + location?.longitude.toString()
                 val map = mapOf<String, Any>(Constants.LATLONG to thingy)
-                locationRef.set(map)
+                locationRef.document(email).set(map)
             }
             .addOnFailureListener {
-                Log.d(Constants.TAG, "Failed location")
+                Log.d(Constants.TAG, String.format("Failed location: %s", it.toString()))
             }
     }
 
@@ -159,10 +164,86 @@ class BottomNavActivity : AppCompatActivity(),
     }
 
     private fun addFriend(theirEmail: String) {
-        val map1 = mapOf<String, Any>("nickname" to theirEmail)
+        val map1 = mapOf<String, Any>(Constants.STATE to true)
         usersRef.document(email).collection(Constants.FRIENDS).document(theirEmail).set(map1)
-        val map2 = mapOf<String, Any>("nickname" to email)
+        val map2 = mapOf<String, Any>(Constants.STATE to true)
         usersRef.document(theirEmail).collection(Constants.FRIENDS).document(email).set(map2)
+    }
+
+    //Authorization through google auth
+
+    val auth = FirebaseAuth.getInstance()
+    lateinit var authListener: FirebaseAuth.AuthStateListener
+    private val RC_SIGN_IN = 1
+
+    override fun onLoginButtonPressed() {
+        launchLoginUI()
+    }
+
+    private fun launchLoginUI() {
+        val providers = arrayListOf(
+            AuthUI.IdpConfig.EmailBuilder().build()
+        )
+
+        // Create and launch sign-in intent
+
+        val loginIntent = AuthUI.getInstance()
+            .createSignInIntentBuilder()
+            .setAvailableProviders(providers)
+            .setLogo(R.drawable.logo)
+            .build()
+
+        startActivityForResult(loginIntent, RC_SIGN_IN)
+    }
+
+    override fun onStart() {
+        super.onStart()
+        if (::authListener.isInitialized) auth.addAuthStateListener(authListener)
+    }
+
+    override fun onStop() {
+        super.onStop()
+        auth.removeAuthStateListener(authListener)
+    }
+
+    private fun initializeListeners() {
+        authListener = FirebaseAuth.AuthStateListener {
+            val user = it.currentUser
+            if(user!=null) {
+                setupUser(user)
+            } else {
+                switchToSplashFragment()
+            }
+        }
+
+    }
+
+    private fun setupUser(user: FirebaseUser) {
+        email = user.email.toString()
+        usersRef.document(email).get().addOnSuccessListener { result ->
+            if (result.getString("nickname") == null) {
+                val map = mapOf<String, Any>("nickname" to email)
+                usersRef.document(email).set(map)
+            }
+        }
+        switchToFriendsListFragment()
+    }
+
+    override fun logout() {
+        auth.signOut()
+    }
+
+    private fun switchToSplashFragment() {
+        nav_view.selectedItemId = R.id.friends
+        val ft = supportFragmentManager.beginTransaction()
+        ft.replace(R.id.fragment_container, SplashFragment())
+        ft.commit()
+    }
+
+    private fun switchToFriendsListFragment() {
+        val ft = supportFragmentManager.beginTransaction()
+        ft.replace(R.id.fragment_container, FriendListFragment())
+        ft.commit()
     }
 
 }
