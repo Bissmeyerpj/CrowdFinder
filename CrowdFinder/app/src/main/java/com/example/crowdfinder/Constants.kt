@@ -8,4 +8,5 @@ object Constants {
     const val LATLONG = "latlong"
     const val NICKNAME = "nickname"
     const val STATE = "friendState"
+    const val REQUESTS = "requests"
 }

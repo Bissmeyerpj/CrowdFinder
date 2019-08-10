@@ -20,7 +20,7 @@ class FriendListFragment : Fragment() {
                               savedInstanceState: Bundle?
     ): View? {
         val recyclerView = inflater.inflate(R.layout.fragment_friend_list, container, false) as RecyclerView
-        val email = listener?.getEmail() ?: "admin"
+        val email = listener?.getEmail() ?: ""
         val adapter = FriendListAdapter(context, listener, email)
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(context)

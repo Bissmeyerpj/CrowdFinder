@@ -27,4 +27,9 @@
     <string name="add_friend_title">Add a Friend by Email</string>
     <string name="login">Login</string>
     <string name="settings">Settings</string>
+    <string name="click_to_track">Click to Track</string>
+    <string name="refresh">Refresh</string>
+    <string name="no_one">No One!</string>
+    <string name="n_a">N/A</string>
+    <string name="remove_friend_title">Remove Friend?</string>
 </resources>

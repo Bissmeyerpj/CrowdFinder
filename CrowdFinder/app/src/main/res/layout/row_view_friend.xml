@@ -23,21 +23,33 @@
                 android:textStyle="bold"
                 android:textColor="@color/darkBlue"
                 android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
         />
 
-        <Button
+        <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:text="Request"
+                android:text="@string/click_to_track"
                 android:textSize="24sp"
                 android:textColor="@color/brightOrange"
                 android:background="@color/darkBlue"
-                android:layout_margin="3dp"
+                android:layout_margin="5dp"
                 android:padding="5dp"
         />
+
+        <TextView
+                android:padding="10dp"
+                android:textSize="20sp"
+                android:id="@+id/friend_email_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/darkBlue"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/friend_name_text_view"
+        />
+
+
 
     </RelativeLayout>
 

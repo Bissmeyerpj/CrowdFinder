@@ -17,7 +17,8 @@ class RequestListFragment : Fragment() {
                               savedInstanceState: Bundle?
     ): View? {
         val recyclerView = inflater.inflate(R.layout.fragment_request_list, container, false) as RecyclerView
-        val adapter = RequestListAdapter(context, listener)
+        val email = listener?.getEmail() ?: ""
+        val adapter = RequestListAdapter(context, listener, email)
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(context)
         recyclerView.setHasFixedSize(true)
@@ -41,7 +42,8 @@ class RequestListFragment : Fragment() {
 
 
     interface OnRequestSelectedListener {
-        fun onRequestSelected(request: Request)
+        fun onRequestSelected(friend: Friend, accepted: Boolean)
+        fun getEmail(): String
     }
 
 }

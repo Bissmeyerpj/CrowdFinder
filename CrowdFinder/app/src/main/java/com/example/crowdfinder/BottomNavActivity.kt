@@ -34,10 +34,10 @@ class BottomNavActivity : AppCompatActivity(),
 {
 
     private lateinit var email: String
-    private var locationString = ""
-    private var currentFriend = Friend("Dummy Name")
+    private var locationString = "N/A"
+    private var currentFriend = Friend("No One!")
     private var locationRef = FirebaseFirestore.getInstance().collection(Constants.LOCATIONS)
-    val usersRef = FirebaseFirestore.getInstance().collection(Constants.USERS)
+    private val usersRef = FirebaseFirestore.getInstance().collection(Constants.USERS)
 
     private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         var switchTo: Fragment? = null
@@ -47,7 +47,6 @@ class BottomNavActivity : AppCompatActivity(),
             }
             R.id.compass -> {
                 switchTo = CompassFragment()
-                lastLocation()
             }
             R.id.friends -> {
                 switchTo = FriendListFragment()
@@ -75,8 +74,6 @@ class BottomNavActivity : AppCompatActivity(),
         initializeListeners()
         fab.setOnClickListener { view ->
             handleFabClick()
-//            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                .setAction("Action", null).show()
         }
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
@@ -89,6 +86,8 @@ class BottomNavActivity : AppCompatActivity(),
             email = auth.currentUser?.email.toString()
             Log.d(Constants.TAG, auth.currentUser?.displayName.toString())
         }
+
+        lastLocation()
     }
 
     private lateinit var fusedLocationClient: FusedLocationProviderClient
@@ -107,10 +106,16 @@ class BottomNavActivity : AppCompatActivity(),
             }
     }
 
-    override fun getLocation(): String = locationString
+    override fun getLocation(): String {
+        lastLocation()
+        return locationString
+    }
 
-    override fun onRequestSelected(request: Request) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    override fun onRequestSelected(friend: Friend, accepted: Boolean) {
+        val state = if(accepted) "accepted" else "denied"
+        Log.d(Constants.TAG, String.format("%s request from %s", state, friend.name))
+        if (accepted) addFriend(friend.email)
+        usersRef.document(email).collection(Constants.REQUESTS).document(friend.email).delete()
     }
 
     override fun onFriendSelected(friend: Friend) {
@@ -118,14 +123,21 @@ class BottomNavActivity : AppCompatActivity(),
         val friendLocationRef = FirebaseFirestore.
             getInstance().
             collection(Constants.LOCATIONS).
-            document(currentFriend.email)
+            document(friend.email)
 
         friendLocationRef.get().addOnSuccessListener {
             locationString = it.get(Constants.LATLONG).toString()
         }
         val ft = supportFragmentManager.beginTransaction()
-        ft.replace(R.id.fragment_container, CompassFragment(), "MY_FRAGMENT")
+        val cf = CompassFragment()
+        ft.replace(R.id.fragment_container, cf, "MY_FRAGMENT")
         ft.commit()
+        nav_view.selectedItemId = R.id.compass
+        Toast.makeText(
+            this,
+            String.format("Tracking %s, Press REFRESH", friend.name),
+            Toast.LENGTH_LONG
+        ).show()
     }
 
     override fun getEmail(): String {
@@ -149,7 +161,7 @@ class BottomNavActivity : AppCompatActivity(),
             usersRef.get().addOnSuccessListener { result ->
                 for (doc in result) {
                     if (doc.id == friendEmail) {
-                        addFriend(friendEmail)
+                        sendRequest(friendEmail)
                         return@addOnSuccessListener
                     }
                 }
@@ -164,10 +176,21 @@ class BottomNavActivity : AppCompatActivity(),
     }
 
     private fun addFriend(theirEmail: String) {
-        val map1 = mapOf<String, Any>(Constants.STATE to true)
-        usersRef.document(email).collection(Constants.FRIENDS).document(theirEmail).set(map1)
-        val map2 = mapOf<String, Any>(Constants.STATE to true)
-        usersRef.document(theirEmail).collection(Constants.FRIENDS).document(email).set(map2)
+        usersRef.document(theirEmail).get().addOnSuccessListener {
+            val map1 = mapOf(Constants.STATE to true, Constants.NICKNAME to (it.getString(Constants.NICKNAME)?:"ERROR"))
+            usersRef.document(email).collection(Constants.FRIENDS).document(theirEmail).set(map1)
+        }
+        usersRef.document(email).get().addOnSuccessListener {
+            val map2 = mapOf(Constants.STATE to true, Constants.NICKNAME to (it.getString(Constants.NICKNAME)?:"ERROR"))
+            usersRef.document(theirEmail).collection(Constants.FRIENDS).document(email).set(map2)
+        }
+    }
+
+    private fun sendRequest(theirEmail: String) {
+        val requestRef = FirebaseFirestore.getInstance().collection(Constants.USERS).document(theirEmail).collection(Constants.REQUESTS)
+            .document(email)
+        val map = mapOf<String, Any>(Constants.STATE to true)
+        requestRef.set(map)
     }
 
     //Authorization through google auth
@@ -198,7 +221,7 @@ class BottomNavActivity : AppCompatActivity(),
 
     override fun onStart() {
         super.onStart()
-        if (::authListener.isInitialized) auth.addAuthStateListener(authListener)
+        auth.addAuthStateListener(authListener)
     }
 
     override fun onStop() {

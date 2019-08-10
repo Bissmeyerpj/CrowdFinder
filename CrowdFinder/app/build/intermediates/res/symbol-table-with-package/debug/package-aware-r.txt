@@ -1191,6 +1191,7 @@ id clip_horizontal
 id clip_vertical
 id collapseActionView
 id compass
+id compass_display
 id confirmation_code
 id confirmation_code_layout
 id container
@@ -1243,6 +1244,7 @@ id forever
 id fragment_container
 id fragment_phone
 id fragment_register_email
+id friend_email_text_view
 id friend_name_text_view
 id friends
 id ghost_view
@@ -1277,6 +1279,7 @@ id location_layout
 id location_text_description
 id login_button
 id logo
+id logo_icon
 id logout_button
 id main_tos_and_pp
 id masked
@@ -1284,7 +1287,6 @@ id media_actions
 id message
 id middle
 id mini
-id movie_quotes_icon
 id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
@@ -1320,6 +1322,7 @@ id progress_circular
 id progress_horizontal
 id radio
 id recycler_view
+id refresh_button
 id request_accept_button
 id request_decline_button
 id request_name_text_view
@@ -1583,6 +1586,7 @@ string bottom_sheet_behavior
 string change
 string character_counter_content_description
 string character_counter_pattern
+string click_to_track
 string com_crashlytics_android_build_id
 string common_google_play_services_enable_button
 string common_google_play_services_enable_text
@@ -1697,10 +1701,12 @@ string merica
 string metric
 string metric_u_s
 string mtrl_chip_close_icon_content_description
+string n_a
 string name
 string nickname
 string nickname_hint
 string night_mode
+string no_one
 string notify
 string password_hint
 string password_toggle_content_description
@@ -1709,6 +1715,8 @@ string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
 string project_id
+string refresh
+string remove_friend_title
 string search_menu_title
 string settings
 string sign_up_button

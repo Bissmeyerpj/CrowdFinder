@@ -9,19 +9,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import kotlinx.android.synthetic.main.fragment_compass.*
 import kotlinx.android.synthetic.main.fragment_compass.view.*
 import kotlinx.android.synthetic.main.row_view_friend.view.*
 
 
 class CompassFragment : Fragment() {
 
-    var friend:Friend? = Friend("MyFriend")
+    private var friend:Friend = Friend("No One!")
     var location: String? = "Lat : Long"
 
     private var listener: LocationStringListener? = null
     interface LocationStringListener {
-        fun getFriend(): Friend
         fun getLocation(): String
+        fun getFriend(): Friend
     }
 
 
@@ -32,17 +33,17 @@ class CompassFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_compass, container, false)
         location = listener?.getLocation()
-        view.current_distance_textview.text = location
 
-
-        friend = listener?.getFriend()
-        view.currently_tracked_friend_textview.text = friend?.name
-
+        view.refresh_button.setOnClickListener {
+            refresh()
+        }
         return view
     }
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
+        view?.currently_tracked_friend_textview?.text = friend.name
+        view?.current_distance_textview?.text = location
         if (context is LocationStringListener) {
             listener = context
             view?.current_distance_textview?.text = listener?.getLocation()
@@ -50,6 +51,14 @@ class CompassFragment : Fragment() {
         } else {
             throw RuntimeException(context.toString() + " must implement LocationStringListener")
         }
+    }
+
+    fun refresh() {
+        friend = listener?.getFriend() ?: friend
+        location = listener?.getLocation()
+
+        view?.currently_tracked_friend_textview?.text = friend.name
+        view?.current_distance_textview?.text = location
     }
 
 
