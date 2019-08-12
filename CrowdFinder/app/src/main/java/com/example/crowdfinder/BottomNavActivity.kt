@@ -1,6 +1,10 @@
 package com.example.crowdfinder
 
 import android.annotation.SuppressLint
+import android.hardware.Sensor
+import android.hardware.SensorEvent
+import android.hardware.SensorEventListener
+import android.hardware.SensorManager
 import android.location.Location
 import android.location.LocationListener
 import android.location.LocationManager
@@ -11,6 +15,8 @@ import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log
 import android.view.LayoutInflater
+import android.view.animation.Animation
+import android.view.animation.RotateAnimation
 import android.widget.Toast
 import com.firebase.ui.auth.AuthUI
 import com.google.android.gms.location.FusedLocationProviderClient
@@ -30,12 +36,42 @@ class BottomNavActivity : AppCompatActivity(),
         RequestListFragment.OnRequestSelectedListener,
         CompassFragment.LocationStringListener,
         SettingsFragment.SettingsListener,
-        SplashFragment.OnLoginButtonPressedListener
+        SplashFragment.OnLoginButtonPressedListener,
+        SensorEventListener
 {
+    override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {
+        //Not used
+    }
+
+    private lateinit var mSensorManager : SensorManager
+
+    override fun onResume() {
+        super.onResume()
+
+        // for the system's orientation sensor registered listeners
+        mSensorManager.registerListener(
+            this, mSensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION),
+            SensorManager.SENSOR_DELAY_GAME
+        )
+    }
+
+    override fun onPause() {
+        super.onPause()
+
+        // to stop the listener and save battery
+        mSensorManager.unregisterListener(this)
+    }
+
+    override fun onSensorChanged(event: SensorEvent?) {
+        // get the angle around the z-axis rotated
+        val degree = Math.round(event!!.values[0])
+        headingString = degree.toString()
+    }
 
     private lateinit var email: String
     private var locationString = "N/A"
-    private var currentFriend = Friend("No One!")
+    private var headingString = "N/A"
+    private var currentFriend: Friend? = null
     private var locationRef = FirebaseFirestore.getInstance().collection(Constants.LOCATIONS)
     private val usersRef = FirebaseFirestore.getInstance().collection(Constants.USERS)
 
@@ -87,6 +123,8 @@ class BottomNavActivity : AppCompatActivity(),
             Log.d(Constants.TAG, auth.currentUser?.displayName.toString())
         }
 
+        mSensorManager = getSystemService(SENSOR_SERVICE) as SensorManager
+
         lastLocation()
     }
 
@@ -97,8 +135,7 @@ class BottomNavActivity : AppCompatActivity(),
         fusedLocationClient.lastLocation
             .addOnSuccessListener { location: Location? ->
                 Log.d(Constants.TAG, "Successful location")
-                val thingy = location?.latitude.toString() + " : " + location?.longitude.toString()
-                val map = mapOf<String, Any>(Constants.LATLONG to thingy)
+                val map = mapOf<String, Any>(Constants.LAT to location!!.latitude, Constants.LONG to location!!.longitude)
                 locationRef.document(email).set(map)
             }
             .addOnFailureListener {
@@ -111,6 +148,10 @@ class BottomNavActivity : AppCompatActivity(),
         return locationString
     }
 
+    override fun getHeading(): String {
+        return headingString
+    }
+
     override fun onRequestSelected(friend: Friend, accepted: Boolean) {
         val state = if(accepted) "accepted" else "denied"
         Log.d(Constants.TAG, String.format("%s request from %s", state, friend.name))
@@ -120,14 +161,6 @@ class BottomNavActivity : AppCompatActivity(),
 
     override fun onFriendSelected(friend: Friend) {
         currentFriend = friend
-        val friendLocationRef = FirebaseFirestore.
-            getInstance().
-            collection(Constants.LOCATIONS).
-            document(friend.email)
-
-        friendLocationRef.get().addOnSuccessListener {
-            locationString = it.get(Constants.LATLONG).toString()
-        }
         val ft = supportFragmentManager.beginTransaction()
         val cf = CompassFragment()
         ft.replace(R.id.fragment_container, cf, "MY_FRAGMENT")
@@ -144,7 +177,7 @@ class BottomNavActivity : AppCompatActivity(),
         return email
     }
 
-    override fun getFriend(): Friend {
+    override fun getFriend(): Friend? {
         return currentFriend
     }
 
