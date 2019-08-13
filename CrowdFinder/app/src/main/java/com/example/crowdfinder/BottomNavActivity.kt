@@ -6,25 +6,18 @@ import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager
 import android.location.Location
-import android.location.LocationListener
-import android.location.LocationManager
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
-import android.support.design.widget.Snackbar
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log
 import android.view.LayoutInflater
-import android.view.animation.Animation
-import android.view.animation.RotateAnimation
 import android.widget.Toast
 import com.firebase.ui.auth.AuthUI
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import com.google.firebase.firestore.CollectionReference
-import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
 
 import kotlinx.android.synthetic.main.activity_bottom_nav.*
@@ -65,12 +58,12 @@ class BottomNavActivity : AppCompatActivity(),
     override fun onSensorChanged(event: SensorEvent?) {
         // get the angle around the z-axis rotated
         val degree = Math.round(event!!.values[0])
-        headingString = degree.toString()
+        heading = degree.toFloat()
     }
 
-    private lateinit var email: String
+    private var email: String = ""
     private var locationString = "N/A"
-    private var headingString = "N/A"
+    private var heading = 0.0f
     private var currentFriend: Friend? = null
     private var locationRef = FirebaseFirestore.getInstance().collection(Constants.LOCATIONS)
     private val usersRef = FirebaseFirestore.getInstance().collection(Constants.USERS)
@@ -124,8 +117,6 @@ class BottomNavActivity : AppCompatActivity(),
         }
 
         mSensorManager = getSystemService(SENSOR_SERVICE) as SensorManager
-
-        lastLocation()
     }
 
     private lateinit var fusedLocationClient: FusedLocationProviderClient
@@ -148,8 +139,8 @@ class BottomNavActivity : AppCompatActivity(),
         return locationString
     }
 
-    override fun getHeading(): String {
-        return headingString
+    override fun getHeading(): Float {
+        return heading
     }
 
     override fun onRequestSelected(friend: Friend, accepted: Boolean) {

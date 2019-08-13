@@ -14,22 +14,27 @@ import kotlinx.android.synthetic.main.fragment_compass.*
 import kotlinx.android.synthetic.main.fragment_compass.view.*
 import kotlinx.android.synthetic.main.row_view_friend.view.*
 import kotlin.math.roundToInt
+import android.view.animation.Animation
+import android.view.animation.RotateAnimation
+import kotlin.math.pow
+import kotlin.math.sqrt
 
 
 class CompassFragment : Fragment() {
 
     private var friend: Friend? = null
     var location: String = "Lat : Long"
-    var heading: String = "Heading"
+    var heading = 0.0f
     private var theirLat: Double = 10.0
     private var theirLong: Double = 10.0
     private var myLat: Double = 10.0
     private var myLong: Double = 10.0
+    private var currentDegree = 0.0
 
     private var listener: LocationStringListener? = null
     interface LocationStringListener {
         fun getLocation(): String
-        fun getHeading(): String
+        fun getHeading(): Float
         fun getFriend(): Friend?
         fun getEmail(): String
     }
@@ -62,7 +67,7 @@ class CompassFragment : Fragment() {
 
     fun refresh() {
         friend = listener?.getFriend()
-        view?.currently_tracked_friend_textview?.text = friend?.name
+        view?.currently_tracked_friend_textview?.text = friend?.name ?: "No One!"
 
         getLocations()
     }
@@ -89,6 +94,8 @@ class CompassFragment : Fragment() {
 
     private fun calculateAndPost() {
 
+        heading = listener?.getHeading() ?: heading
+
         val deltaLat = theirLat - myLat
         val deltaLong = theirLong - myLong
 
@@ -100,11 +107,30 @@ class CompassFragment : Fragment() {
             angle = 270 - angle
         }
 
+        val rotationHeading = angle - heading
 
-        view?.current_distance_textview?.text = String.format("needed heading: %s", angle.toString())
+        val ra = RotateAnimation(
+            currentDegree.toFloat(),
+            rotationHeading.toFloat(),
+            Animation.RELATIVE_TO_SELF, 0.5f,
+            Animation.RELATIVE_TO_SELF,
+            0.5f
+        )
 
-        heading = listener?.getHeading() ?: heading
-        view?.compass_display?.text = String.format("current heading: %s", heading)
+        val dist = sqrt(deltaLat.pow(2.0) + deltaLong.pow(2.0)) * 364320
+        val distInt = dist.roundToInt()
+
+        ra.duration = 210
+        ra.fillAfter = true
+        view?.compass_display?.startAnimation(ra)
+
+        currentDegree = rotationHeading
+
+//        view?.current_distance_textview?.text = String.format("needed heading: %s", angle.toString())
+
+        view?.current_distance_textview?.text = String.format("%s feet", distInt.toString())
+
+//        view?.current_heading_display?.text = String.format("current heading: %s", heading.toString())
     }
 
 

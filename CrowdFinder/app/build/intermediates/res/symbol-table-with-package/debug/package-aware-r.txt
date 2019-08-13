@@ -1085,6 +1085,7 @@ drawable common_google_signin_btn_text_light
 drawable common_google_signin_btn_text_light_focused
 drawable common_google_signin_btn_text_light_normal
 drawable common_google_signin_btn_text_light_normal_background
+drawable compass_arrow
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1214,9 +1215,7 @@ id design_navigation_view
 id dimensions
 id direct
 id disableHome
-id distance_layout
 id distance_textview
-id distance_toggle_button
 id dynamic
 id edit_phone_number
 id edit_query
@@ -1274,9 +1273,6 @@ id line1
 id line3
 id listMode
 id list_item
-id location_button
-id location_layout
-id location_text_description
 id login_button
 id logo
 id logo_icon
@@ -1296,15 +1292,11 @@ id nav_view
 id navigation_header_container
 id never
 id nickname_edit_text
-id night_mode_layout
-id night_mode_toggle_button
 id none
 id normal
 id notification_background
-id notification_layout
 id notification_main_column
 id notification_main_column_container
-id notification_toggle_button
 id outline
 id packed
 id parallax

@@ -2144,6 +2144,10 @@
         "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\3f0793eed2c22dda651ac21d6582c460\\res\\drawable-xhdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
     },
     {
+        "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable_compass_arrow.png.flat",
+        "source": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\src\\main\\res\\drawable\\compass_arrow.png"
+    },
+    {
         "merged": "C:\\Users\\Phil\\AndroidStudioProjects\\CrowdFinder\\CrowdFinder\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_tab_indicator_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Phil\\.gradle\\caches\\transforms-2\\files-2.1\\3f0793eed2c22dda651ac21d6582c460\\res\\drawable-xxhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
     },
